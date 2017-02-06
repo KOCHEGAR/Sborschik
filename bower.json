@@ -1,0 +1,24 @@
+{
+  "name": "defaultname",
+  "authors": [
+    "Alexey <alekseydavaydosvidaniya@gmail.com>"
+  ],
+  "description": "defaultdescription",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src/libs/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize.css": "*",
+    "jquery": "3.*",
+    "bourbon": "^4.2.7"
+  }
+}

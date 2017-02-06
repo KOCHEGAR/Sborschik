@@ -1,0 +1,49 @@
+{
+  "name": "sborka3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Khabarovskii",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.11.1",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-cache": "^0.4.2",
+    "gulp-changed": "^1.3.2",
+    "gulp-cheerio": "^0.6.2",
+    "gulp-combine-mq": "^0.4.0",
+    "gulp-concat-css": "^2.3.0",
+    "gulp-contrib-copy": "^0.1.2",
+    "gulp-cssfont64-fork": "^0.0.2",
+    "gulp-cssnano": "^2.1.1",
+    "gulp-file-include": "^1.0.0",
+    "gulp-html-prettify": "0.0.1",
+    "gulp-if": "^2.0.2",
+    "gulp-imagemin": "^2.4.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-postcss": "^6.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.5.4",
+    "gulp-sass": "^2.2.0",
+    "gulp-svg-symbols": "^2.0.2",
+    "gulp-svgmin": "^1.2.3",
+    "gulp-uglify": "^2.0.0",
+    "imagemin-pngquant": "^4.2.2",
+    "path": "^0.12.7",
+    "postcss-plugin-px2rem": "^0.6.0",
+    "run-sequence": "^1.2.2"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 10 versions"
+  ],
+  "dependencies": {
+    
+    "gulp-load-plugins": "^1.4.0"
+  }
+}
