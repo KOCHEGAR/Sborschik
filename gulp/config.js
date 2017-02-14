@@ -12,7 +12,7 @@ module.exports = {
       'server': {
           'baseDir': "./build"
       },
-      'tunnel': true,
+      // 'tunnel': true,
       'host': 'localhost',
       'port': 9001,
       'logPrefix': "Khabarovskii",
@@ -23,13 +23,13 @@ module.exports = {
   'styles': {
     'src' : './src/style/**/*.scss',
     'dest': './build/css',
-    'watch': './src/style/**/*.scss'
+    'watch': 'src/style/**/*.scss'
   },
 
   'scripts': {
     'src' : './src/js/**/*.js',
     'dest': './build/js',
-    'watch': './src/js/**/*.js'
+    'watch': 'src/js/**/*.js'
   },
   
   // тут  точная настройка распределения свг и имг
@@ -40,7 +40,10 @@ module.exports = {
       'svgImages': './src/img/svgImages/**/*.svg',
 
       //that need for svg
-      'svgIcons': './src/img/svgImages/svgIcons/**/*.svg'
+      'svgIcons': './src/img/svgImages/svgIcons/**/*.svg',
+
+
+      'pngIconsForSprite': './src/img/rasterSprites/pngToSprite/*.png'
     },
 
     'dest': {
@@ -49,12 +52,16 @@ module.exports = {
 
       //that need for svg
       'svgIcons': './build/img/svgImages/svgIcons/',
-      'svgSymbol': './build/img/svgImages/svgSymbol/'
+      'svgSymbol': './build/img/svgImages/svgSymbol/',
+
+      'pngSprite': './build/img/pngSprites/'
     },
 
     'watch': {
-      'svgIcons': './src/img/svgImages/svgIcons/**/*.svg',
-      'rasterImages': './src/img/rasterImages/**/*.{png,jpeg,jpg,gif}'
+      'svgIcons': 'src/img/svgImages/svgIcons/**/*.svg',
+      'rasterImages': 'src/img/rasterImages/**/*',
+      // директория для теста
+      'pngIconsForSprite': 'src/img/rasterSprites/pngToSprite/*.png'
     }
   },
 
@@ -64,8 +71,8 @@ module.exports = {
     'dest': './build/',
 
     
-    'watchPages': './src/*.html',
-    'watchTemplates': './src/html_components/**/*.html'
+    'watchPages': 'src/*.html',
+    'watchTemplates': 'src/html_components/**/*.html'
   },
 
   'fonts': {
@@ -81,7 +88,7 @@ module.exports = {
     
     'dest': './build/fonts/',
 
-    'watch': './src/fonts/**/*'
+    'watch': 'src/fonts/**/*'
   },
 
   'clean':{
@@ -90,6 +97,7 @@ module.exports = {
 
         'root':       './build',
         'img':        './build/img/rasterImages',
+        'pngSprite':  './build/img/pngSprite',
         'html':       './build/*.html',
         'svg':        './build/img/svgImages',
         // 'svgSprite':  './build/img/svg/symbol',

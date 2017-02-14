@@ -45,7 +45,7 @@ gulp.task('sass', function () {
     .pipe(p.rename({suffix: ".min"}))
     .pipe(p.cssnano())
     .pipe(gulp.dest( config.styles.dest ))
-    // .pipe(reload({stream: true}))
+    .pipe(reload({stream: true}))
     .pipe(p.rename({suffix: ".rem"}))
     .pipe(p.postcss( proc ))
     .pipe(gulp.dest( config.styles.dest ))

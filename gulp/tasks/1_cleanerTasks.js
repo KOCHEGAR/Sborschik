@@ -11,9 +11,7 @@ gulp.task('clearCache', function(){
   return p.cache.clearAll();
 });
 
-gulp.task('ccc', function () {
-  del.sync(['src/fonts/*.css']);
-})
+
 
 gulp.task('del:build', function() {
   del.sync([config.clean.build.root]);
@@ -29,6 +27,9 @@ gulp.task('del:buildHtmlDir', function () {
 });
 gulp.task('del:buildJsDir', function () {
   del.sync([config.clean.build.js]);
+});
+gulp.task('del:buildPngSpriteDir', function () {
+  del.sync([config.clean.build.pngSprite]);
 });
 // gulp.task('del:buildSvgDir', function () {
 //   del.sync([paths.clean.build.svg]);

@@ -33,17 +33,18 @@
     "gulp-svg-symbols": "^2.0.2",
     "gulp-svgmin": "^1.2.3",
     "gulp-uglify": "^2.0.0",
+    "gulp.spritesmith": "^6.3.0",
     "imagemin-pngquant": "^4.2.2",
     "path": "^0.12.7",
     "postcss-plugin-px2rem": "^0.6.0",
-    "run-sequence": "^1.2.2"
+    "run-sequence": "^1.2.2",
+    "vinyl-buffer": "^1.0.0"
   },
   "browserslist": [
     "> 1%",
     "last 10 versions"
   ],
   "dependencies": {
-    
     "gulp-load-plugins": "^1.4.0"
   }
 }

@@ -15,6 +15,9 @@ gulp.task('updateImg', function(){
 gulp.task('updateJs', function(){
   runSequence('del:buildJsDir','js');
 });
+gulp.task('updatePngSprite', function(){
+  runSequence('del:buildPngSpriteDir','buildPngSprite');
+});
 // gulp.task('cleanAndUpdateSvg', function(){
 //   // 'svgsymbol' // 
 // });
