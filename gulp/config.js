@@ -19,6 +19,9 @@ module.exports = {
       'notify': true // уведомления
   },
   
+  'jsbeautifier': {
+    'src' : '.jsbeautifyrc'
+  },
 
   'styles': {
     'src' : './src/style/**/*.scss',
