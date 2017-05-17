@@ -30,7 +30,8 @@ module.exports = {
   },
 
   'scripts': {
-    'src' : './src/js/**/*.js',
+
+    'src' : './src/js/*.js',
     'dest': './build/js',
     'watch': 'src/js/**/*.js'
   },
@@ -46,36 +47,39 @@ module.exports = {
       'svgIcons': './src/img/svgImages/svgIcons/**/*.svg',
 
 
-      'pngIconsForSprite': './src/img/rasterSprites/pngToSprite/*.png'
+      'spriteSrcFolder': './src/img/rasterSprites/'
     },
-
+ 
     'dest': {
       'rasterImages': './build/img/rasterImages/',
       'svgImages': './build/img/svgImages/',
 
       //that need for svg
-      'svgIcons': './build/img/svgImages/svgIcons/',
-      'svgSymbol': './build/img/svgImages/svgSymbol/',
+      'svgIcons': './build/img/svgImages/svgIcons/', 
 
-      'pngSprite': './build/img/pngSprites/'
+      // для случая, если svg-sprite загружается из localstorage файлом svgToLocalStorage.js
+      'externalSvgSymbol': './build/img/svgImages/svgSymbol/',
+      // для случая, если svg-sprite нужно вставлять прямо при сборке
+      'internalSvgSymbol' : './src/img/svgImages/svgSprite/',
+
+
+      'spriteDestFolder': './build/img/pngSprites/'
     },
 
     'watch': {
       'svgIcons': 'src/img/svgImages/svgIcons/**/*.svg',
       'rasterImages': 'src/img/rasterImages/**/*',
-      // директория для теста
-      'pngIconsForSprite': 'src/img/rasterSprites/pngToSprite/*.png'
+   
+      'pngIconsForSprite': 'src/img/rasterSprites/**/*.png'
     }
   },
 
   'html': {
 
-    'src': './src/*.html',
+    'src': './src/*.njk',
     'dest': './build/',
-
     
-    'watchPages': 'src/*.html',
-    'watchTemplates': 'src/html_components/**/*.html'
+    'watch': ['src/*.njk', 'src/html_components/**/*.njk']
   },
 
   'fonts': {
@@ -100,13 +104,13 @@ module.exports = {
 
         'root':       './build',
         'img':        './build/img/rasterImages',
-        'pngSprite':  './build/img/pngSprite',
+        'pngSprite':  './build/img/pngSprites',
         'html':       './build/*.html',
         'svg':        './build/img/svgImages',
         // 'svgSprite':  './build/img/svg/symbol',
         // 'svgIcons':   './build/img/svg/svgicons',
         'js':         './build/js',
-        'fonts':      './build/fonts/'
+        'fonts':      './build/fonts'
     },
   }
 };

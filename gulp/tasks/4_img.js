@@ -9,6 +9,10 @@ var reload = browserSync.reload;
 
 gulp.task('img', function() {
   return gulp.src( config.images.src.rasterImages ) 
+    .pipe(p.plumber(function (er) {
+        console.log(er.toString());
+        this.emit('end');
+     }))
     .pipe(p.cache(p.imagemin({  
       verbose: true,
       interlaced: true,
@@ -17,6 +21,6 @@ gulp.task('img', function() {
 
     })))
     .pipe(gulp.dest( config.images.dest.rasterImages ))
-    .pipe(reload({stream: true}))
+    .pipe(reload({stream: true}));
 
 });

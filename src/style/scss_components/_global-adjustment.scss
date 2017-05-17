@@ -10,7 +10,7 @@ body {
 	font-weight: 400;
 	-webkit-font-smoothing: antialiased;
 	line-height: 1.42;
-	display: block;
+	margin: 0;
 	position: relative;
 }
 
@@ -34,7 +34,13 @@ svg, img{
 	max-width: 100%;
 	height: auto;
 }
-*, *::after, *::before {
+
+html{
+	box-sizing: border-box;
+}
+html * {box-sizing: inherit;}
+
+*::after, *::before {
 	box-sizing: border-box;
 }
 

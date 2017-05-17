@@ -1,5 +1,5 @@
 # See https://help.github.com/articles/ignoring-files for more about ignoring files.
-#
+
 
 
 node_modules/
@@ -7,3 +7,5 @@ node_modules/
 build/
 
 src/libs/
+
+src/style/scss_components/scss_sprite/

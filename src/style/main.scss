@@ -1,12 +1,12 @@
 
+@import 'scss_components/_variables.scss';
 @import 'scss_components/_mixins.scss';
-// @import '../libs/bourbon/app/assets/stylesheets/_bourbon.scss';
+
 
 // @import '../fonts/_include_fonts.scss';
 
 
 // @import '../libs/normalize.css/normalize';
-@import 'scss_components/_variables.scss';
 @import 'scss_components/_global-adjustment.scss';
 
 
@@ -17,6 +17,7 @@
 .leave-px{
 
    font-size: 16px;
+
 }
 
 

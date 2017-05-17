@@ -3,16 +3,13 @@ var config = require('../config');
 var p = require('gulp-load-plugins')();
 var gulp = require('gulp');
 var del = require('del');
- // var cache = require('gulp-cache');
+
 
 
 
 gulp.task('clearCache', function(){
   return p.cache.clearAll();
 });
-
-
-
 gulp.task('del:build', function() {
   del.sync([config.clean.build.root]);
 });

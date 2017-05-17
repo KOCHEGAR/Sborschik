@@ -1,0 +1,57 @@
+
+{% if not(title) %}
+  {% set title = "Default title" %}
+{% endif %}
+
+
+<!DOCTYPE html>
+<html lang="en" class="leave-px">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>{{ title }}</title>
+  {# Строка ниже - просто подключение шрифта Roboto. 
+     Следует убрать при использовании другого варианта подключения. 
+     Типа файла font-loader.js#}
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+  {# Две строки ниже - это обычная и минифицированная версия 
+     одна из этих строк должна быть закоментирована. На время разработки следует оставлять включеным не минифицированную версию #}
+  {# <link href="css/main.min.css" rel="stylesheet"> #}
+  <link href="css/main.css" rel="stylesheet">
+
+  {# <meta property="og:image" content="path/to/image.jpg">
+
+  <link rel="shortcut icon" href="img/favicon/favicon.png" type="image/x-icon">
+  <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png"> #}
+
+  <!-- Chrome, Firefox OS and Opera -->
+  <meta name="theme-color" content="#000">
+  <!-- Windows Phone -->
+  <meta name="msapplication-navbutton-color" content="#0f0">
+  <!-- iOS Safari -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="#000">
+</head>
+
+<body>
+  {# Строка ниже - это если используется спрайт,составленный на сайте и
+     вставлен в ручную по укзанному пути. 
+     Закоментировать, если используется svgToLocalStorage.js.
+     По умолчанию закоментирован #}
+  {# {% include "../img/svgImages/svgSprite/symbols.svg" %} #}
+  
+  {% include "html_components/header.njk" %}
+  <div class="wrapper">
+    {% block content %} 
+    {% endblock %}
+  </div>
+
+  {% include "html_components/footer.njk" %}
+  <script src='js/main.min.js'></script>
+</body>
+
+</html>

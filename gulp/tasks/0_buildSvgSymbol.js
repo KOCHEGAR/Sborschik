@@ -12,6 +12,10 @@ gulp.task('buildSvgSymbol', function(){
   // create svg-symbol sprite from svg icons
 
   return gulp.src( config.images.src.svgIcons )
+    .pipe(p.plumber(function (er) {
+        console.log(er.toString());
+        this.emit('end');
+     }))
     .pipe(p.imagemin({  
       verbose: true,
       svgoPlugins: [{removeViewBox: false}]
@@ -34,8 +38,14 @@ gulp.task('buildSvgSymbol', function(){
       parserOptions: {xmlMode: true}
     }))
     .pipe(p.rename('symbols.svg'))
-    // .pipe(gulp.dest(paths.src.imgFolder + 'svg/svgsymbol/'))
-    .pipe(gulp.dest( config.images.dest.svgSymbol ))
-    .pipe(reload({stream: true}))
+    
+    // строка ниже - путь до папки,в которой лежит svg-спрайт, 
+    // который будет тягать svgToLocalStorage.js. По умолчанию выключен.
+    // .pipe(gulp.dest( config.images.dest.externalSvgSymbol ))
+    
+    // строка ниже - путь до папки, в которой лежит svg-спрайт, 
+    // который будет вставлен в html при сборке. По умочанию включен.
+    .pipe(gulp.dest( config.images.dest.internalSvgSymbol ))
+    .pipe(reload({stream: true}));
 
 });

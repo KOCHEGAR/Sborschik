@@ -1,0 +1,5 @@
+{% macro svg(class, id_in_sprite) %}
+<svg class="svg-ic svg-ic--{{ class }}">
+  <use xlink:href="#{{ id_in_sprite }}"></use>
+</svg> 
+{% endmacro %}

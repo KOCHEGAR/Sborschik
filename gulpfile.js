@@ -14,6 +14,6 @@
 
 
 global.isProd = false;
-global.notUpdateHtmlTmplt = true;
+global.notUpdateNJKtemplates = true;
 
 require('./gulp');

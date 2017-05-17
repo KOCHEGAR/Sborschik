@@ -1,20 +1,18 @@
-
 var config = require('../config');
 var p = require('gulp-load-plugins')();
 var gulp = require('gulp');
 var filepath = require('path');
 
-gulp.task('svgIconsToBuild',function(){
+gulp.task('svgIconsToBuild', function() {
 
-  return gulp.src( config.images.src.svgIcons )
-
-    .pipe(p.imagemin({  
+  return gulp.src(config.images.src.svgIcons)
+    .pipe(p.imagemin({
       verbose: true,
 
-      svgoPlugins: [{removeViewBox: false}]
+      svgoPlugins: [{ removeViewBox: false }]
     }))
     .pipe(p.cheerio({
-      run: function ($, file) {
+      run: function($, file) {
         $('[fill]').removeAttr('fill');
         //$('[stroke]').removeAttr('stroke');
         $('[style]').removeAttr('style');
@@ -22,10 +20,10 @@ gulp.task('svgIconsToBuild',function(){
 
         $('svg').addClass(prefix + '-svg').html();
       },
-      parserOptions: {xmlMode: true}
+      parserOptions: { xmlMode: true }
     }))
     //cheerio plugin create unnecessary string '&gt;', so replace it.
     .pipe(p.replace('&gt;', '>'))
-    .pipe(gulp.dest( config.images.dest.svgIcons ))
+    .pipe(gulp.dest(config.images.dest.svgIcons));
 
 });
