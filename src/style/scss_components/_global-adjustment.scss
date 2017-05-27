@@ -1,9 +1,7 @@
 html {
 	font-size: 16px;
-	
 }
  
-
 // project specific or default 
 body {
 	font-family: Arial, sans-serif;
@@ -14,21 +12,17 @@ body {
 	position: relative;
 }
 
-
-
 html, body {
 	width: 100%;
 	height: 100%;
 }
 
 .wrapper {
-	
 	//overflow: hidden;
 	position: relative;
 	//background: #fff;
 
 }
-
 
 svg, img{
 	max-width: 100%;
@@ -67,4 +61,48 @@ p {
 h1, h2, h3, h4, h5, h6 {
 	margin-top: 0;
 	font-weight: normal;
+}
+
+// Embeds responsive
+.embed-responsive {
+  position: relative;
+  display: block;
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+
+  .embed-responsive__item,
+  iframe,
+  embed,
+  object,
+  video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    border: 0;
+  }
+}
+
+// Modifier class for 16:9 aspect ratio
+.embed-responsive--16by9 {
+  padding-bottom: 56.25%;
+}
+
+// Modifier class for 4:3 aspect ratio
+.embed-responsive--4by3 {
+  padding-bottom: 75%;
+}
+// hide element
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
 }
