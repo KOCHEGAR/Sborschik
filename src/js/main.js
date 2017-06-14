@@ -3,9 +3,5 @@
 
 
 $(document).ready(function() {
-  $(".content").each(function() {
-
-
-    $(this).addClass("red");
-  });
+  
 });

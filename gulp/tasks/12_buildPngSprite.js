@@ -17,7 +17,8 @@ var scssDestFolder = 'src/style/scss_components/scss_sprite/';
 gulp.task('buildPngSprite', p.folders(config.images.src.spriteSrcFolder, function (folder) { 
 
     var imgURLinCSS = '../img/pngSprites/' + folder + '/' + folder + '.png';
-    
+    // ошибок не будет только тогда, когда тут(config.images.src.spriteSrcFolder)
+    // будет присутствовать хотя-бы одна папка
     var spriteData = gulp.src( path.join(config.images.src.spriteSrcFolder, folder,'*.png') )
       .pipe(p.plumber({
           handleError: function (err) {
