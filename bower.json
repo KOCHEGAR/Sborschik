@@ -1,9 +1,9 @@
 {
-  "name": "JustConfig",
+  "name": "just_config",
   "authors": [
     "Alexey <alekseydavaydosvidaniya@gmail.com>"
   ],
-  "description": "Bower Config for  my frontend builder",
+  "description": "Bower_Config_for_my_frontend_builder",
   "main": "",
   "license": "MIT",
   "homepage": "",
@@ -18,6 +18,6 @@
   ],
   "dependencies": {
     "normalize.css": "*",
-    "jquery": "2.*",
+    "jquery": "2.*"
   }
 }

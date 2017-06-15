@@ -91,5 +91,5 @@ gulp.task('prod', function () {
        'sass', 
        'html', 
        'js' 
-     ]); 
+     ], 'zipProduction'); 
 });

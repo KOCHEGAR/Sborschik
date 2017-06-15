@@ -97,6 +97,21 @@ module.exports = {
 
     'watch': 'src/fonts/**/*'
   },
+  'zipFiles':{
+   
+    'srcSources': [
+      //добавлять по необходимости
+                    './src/**/*',
+                    './gulp/**/*',
+                    './bower.*',
+                    './gulpfile.*',
+                    './package.json',
+                    './yarn.lock',
+                    './.jsbeautifyrc'
+                   ],
+    'srcReady': './build/**/*',
+    'dest': 'ready_archives/'
+  },
 
   'clean':{
 

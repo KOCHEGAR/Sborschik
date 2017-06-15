@@ -6,6 +6,8 @@ node_modules/
 
 build/
 
+ready_archives/
+
 src/libs/
 
 src/style/scss_components/scss_sprite/

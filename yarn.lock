@@ -2041,6 +2041,10 @@ get-stdin@^4.0.1:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/get-stdin/-/get-stdin-4.0.1.tgz#b968c6b0a04384324902e8bf1a5df32579a450fe"
 
+get-stream@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/get-stream/-/get-stream-3.0.0.tgz#8e943d1358dc37555054ecbe2edb05aa174ede14"
+
 getit@~0.4.0:
   version "0.4.2"
   resolved "https://registry.yarnpkg.com/getit/-/getit-0.4.2.tgz#9149c5e55865d767e42712b7c9d0d51b1bf6bca1"
@@ -2555,6 +2559,15 @@ gulp-util@~2.2.0, gulp-util@~2.2.10, gulp-util@~2.2.14:
     multipipe "^0.1.0"
     through2 "^0.5.0"
     vinyl "^0.2.1"
+
+gulp-zip@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/gulp-zip/-/gulp-zip-4.0.0.tgz#1cefc08b4bf36df4b5b1e7c6b36ee55ebbe4a881"
+  dependencies:
+    get-stream "^3.0.0"
+    gulp-util "^3.0.0"
+    through2 "^2.0.1"
+    yazl "^2.1.0"
 
 gulp.spritesmith@^6.3.0:
   version "6.5.0"
@@ -6324,6 +6337,12 @@ yauzl@^2.2.1:
   dependencies:
     buffer-crc32 "~0.2.3"
     fd-slicer "~1.0.1"
+
+yazl@^2.1.0:
+  version "2.4.2"
+  resolved "https://registry.yarnpkg.com/yazl/-/yazl-2.4.2.tgz#14cb19083e1e25a70092c1588aabe0f4e4dd4d88"
+  dependencies:
+    buffer-crc32 "~0.2.3"
 
 yeast@0.1.2:
   version "0.1.2"
